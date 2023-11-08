@@ -10,10 +10,10 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
 // Song titles
-const songs = ['Headlines', 'Drake - Slime You Out ft. SZA']; //Add the songs name here first
+const songs = ['Headlines', 'Drake - Slime You Out ft. SZA', 'Shot For Me', 'The Town', 'The Weeknd-After Hours']; //Add the songs name here first
 
 // Keep track of song
-let songIndex = 1;
+let songIndex = 4;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
