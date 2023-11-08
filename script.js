@@ -73,6 +73,26 @@ function nextSong() {
   playSong();
 }
 
+//FUNTION FOR PAUSING/PLAYING SONG WHILE CLICKING ON SPACEBAR ON KEYBOARD, NEXT SONG BY CLICKING ON RIGHT ARROW AND PREVIOUS SONG BY CLICKING ON LEFT ARROW
+// Function to handle keyboard events
+function handleKeyEvents(e) {
+  if (e.code === 'Space') {
+    const isPlaying = musicContainer.classList.contains('play');
+    if (isPlaying) {
+      pauseSong();
+    } else {
+      playSong();
+    }
+  } else if (e.code === 'ArrowRight') {
+    nextSong();
+  } else if (e.code === 'ArrowLeft') {
+    prevSong();
+  }
+}
+
+// Event listener for keyboard events
+document.addEventListener('keydown', handleKeyEvents);
+
 // Update progress bar
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
